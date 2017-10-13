@@ -1,0 +1,6 @@
+framework module Pods_SwindlerTestApp {
+  umbrella header "Pods-SwindlerTestApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

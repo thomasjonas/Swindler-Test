@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18FA0D36DA4F1B3CEAF32E91 /* Pods_SwindlerTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D289CF896249F601EFE40F92 /* Pods_SwindlerTestApp.framework */; };
 		E98F70761F90B50000BE2DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98F70751F90B50000BE2DEF /* AppDelegate.swift */; };
 		E98F70781F90B50000BE2DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98F70771F90B50000BE2DEF /* Assets.xcassets */; };
 		E98F707B1F90B50000BE2DEF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98F70791F90B50000BE2DEF /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77191097579090A39810AE71 /* Pods-SwindlerTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwindlerTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		B3CE2A94E618E34FA0D7F7C0 /* Pods-SwindlerTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwindlerTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D289CF896249F601EFE40F92 /* Pods_SwindlerTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwindlerTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98F70721F90B50000BE2DEF /* SwindlerTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwindlerTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98F70751F90B50000BE2DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E98F70771F90B50000BE2DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -26,17 +30,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FA0D36DA4F1B3CEAF32E91 /* Pods_SwindlerTestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E4B6A8E94A521E8CD70110C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3CE2A94E618E34FA0D7F7C0 /* Pods-SwindlerTestApp.debug.xcconfig */,
+				77191097579090A39810AE71 /* Pods-SwindlerTestApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E1812C9EFB633D07D08D402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D289CF896249F601EFE40F92 /* Pods_SwindlerTestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E98F70691F90B50000BE2DEF = {
 			isa = PBXGroup;
 			children = (
 				E98F70741F90B50000BE2DEF /* SwindlerTestApp */,
 				E98F70731F90B50000BE2DEF /* Products */,
+				1E4B6A8E94A521E8CD70110C /* Pods */,
+				7E1812C9EFB633D07D08D402 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,9 +91,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E98F70801F90B50000BE2DEF /* Build configuration list for PBXNativeTarget "SwindlerTestApp" */;
 			buildPhases = (
+				665860062D95F4108577FD08 /* [CP] Check Pods Manifest.lock */,
 				E98F706E1F90B50000BE2DEF /* Sources */,
 				E98F706F1F90B50000BE2DEF /* Frameworks */,
 				E98F70701F90B50000BE2DEF /* Resources */,
+				B40EBB09C7B6FDEC5234A921 /* [CP] Embed Pods Frameworks */,
+				937BC509F9FA7AAA4D392200 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +152,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		665860062D95F4108577FD08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwindlerTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		937BC509F9FA7AAA4D392200 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B40EBB09C7B6FDEC5234A921 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E98F706E1F90B50000BE2DEF /* Sources */ = {
@@ -257,6 +335,7 @@
 		};
 		E98F70811F90B50000BE2DEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3CE2A94E618E34FA0D7F7C0 /* Pods-SwindlerTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwindlerTestApp/SwindlerTestApp.entitlements;
@@ -272,6 +351,7 @@
 		};
 		E98F70821F90B50000BE2DEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77191097579090A39810AE71 /* Pods-SwindlerTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwindlerTestApp/SwindlerTestApp.entitlements;
