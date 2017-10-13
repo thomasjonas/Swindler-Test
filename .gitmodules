@@ -2,3 +2,7 @@
 	path = Swindler
 	url = https://github.com/tmandry/Swindler.git
 	branch = fix-invalid-state
+[submodule "AXSwift"]
+	path = AXSwift
+	url = https://github.com/tmandry/AXSwift.git
+	branch = master

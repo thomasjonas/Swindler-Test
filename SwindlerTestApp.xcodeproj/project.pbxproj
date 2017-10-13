@@ -17,6 +17,7 @@
 		77191097579090A39810AE71 /* Pods-SwindlerTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwindlerTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		B3CE2A94E618E34FA0D7F7C0 /* Pods-SwindlerTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwindlerTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D289CF896249F601EFE40F92 /* Pods_SwindlerTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwindlerTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91A44EB1F90BECD00092E04 /* AXSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AXSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98F70721F90B50000BE2DEF /* SwindlerTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwindlerTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98F70751F90B50000BE2DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E98F70771F90B50000BE2DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		7E1812C9EFB633D07D08D402 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E91A44EB1F90BECD00092E04 /* AXSwift.framework */,
 				D289CF896249F601EFE40F92 /* Pods_SwindlerTestApp.framework */,
 			);
 			name = Frameworks;
@@ -193,9 +195,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwindlerTestApp/Pods-SwindlerTestApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AXSwift/AXSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AXSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -261,6 +266,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -275,6 +281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -318,6 +325,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../**";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -326,6 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../**";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;

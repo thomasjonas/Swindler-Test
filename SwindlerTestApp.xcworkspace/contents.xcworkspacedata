@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Swindler/AXSwift/AXSwift.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Swindler/Swindler.xcodeproj">
    </FileRef>
    <FileRef
