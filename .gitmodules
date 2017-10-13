@@ -1,0 +1,4 @@
+[submodule "Swindler"]
+	path = Swindler
+	url = https://github.com/tmandry/Swindler.git
+	branch = fix-invalid-state
